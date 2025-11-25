@@ -11,7 +11,7 @@ from openai import OpenAI
 
 # Step 4: Create a client object that will let us talk to the OpenAI API
 #  OpenAI SDKs are configured to automatically read your API key from the system environment so no need to pass the API key to authenticate else: client = OpenAI(api_key=api_key)
-client = OpenAI(api_key=api_key)
+client = OpenAI()
 
 # Step 5: Ask the OpenAI model to generate a response
 response = client.responses.create(
