@@ -91,12 +91,56 @@ We will next explore both approaches.
 ---
 **open-ai**
 
+Follow there offcial documents from the following link, 
 [OpenAI Platform Quickstart (Python)](https://platform.openai.com/docs/quickstart?language=python)
 
-<img src="images/openai-1.png" alt="connect openai - step 01" width="500">
-<img src="images/openai-2.png" alt="connect openai - step 02" width="500">
-<img src="images/openai-3.png" alt="connect openai - step 03" width="500">
-<img src="images/openai-4_1.png" alt="connect openai - step 04" width="500">
+#### 🔹 Step 01 — Create an API Key  
+<img src="images/openai-1.png" width="400">
+
+#### 🔹 Step 02 — Create a Secret Key  
+<img src="images/openai-2.png" width="400">
+
+#### 🔹 Step 03 — Name the Key  
+<img src="images/openai-3.png" width="300">
+
+#### 🔹 Step 04 — Copy and Save the Key Safely  
+<img src="images/openai-4_1.png" width="300">
+
+
+So now you have the key let's talk to the gpt.....
+[code:](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py)
+
+```python
+# Step 1: Import the 'os' module to access environment variables
+import os
+
+# Step 2: Get your OpenAI API key from your system environment variables
+# Make sure you have set it like this in your terminal before running the script:
+# export OPENAI_API_KEY="your_api_key_here"
+api_key = os.getenv("OPENAI_API_KEY")
+
+# Step 3: Import the OpenAI client library
+from openai import OpenAI
+
+# Step 4: Create a client object that will let us talk to the OpenAI API
+# The OpenAI SDK automatically uses your API key from your system environment,
+# so we don't need to pass it manually unless you want to.
+# Example: client = OpenAI(api_key=api_key)
+client = OpenAI()
+
+# Step 5: Send a request to the model
+response = client.responses.create(
+    model="gpt-5-nano",  # You can change this to any available model
+    input="Write a one-sentence bedtime story about a unicorn."
+)
+
+# Step 6: Print the output text from the model's response
+print(response.output_text)
+```
+For the first time, you may be able to generate responses using smaller models for free — depending on your account credits or trial eligibility.
+
+You can check the official pricing and free-tier details here:
+[API Pricing - OpenAI](https://platform.openai.com/docs/pricing)
 
 
 
