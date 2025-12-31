@@ -272,7 +272,7 @@ print(response.text)
 For the first time, you may be able to generate responses using smaller models for free — depending on your account credits or trial eligibility.
 
 
-You can check the official pricing and free-tier details here:
-[API Pricing - Google Gemini](https://ai.google.dev/gemini-api/docs/pricing)
+You can check the official pricing and free-tier details here:  
+<a href="https://ai.google.dev/gemini-api/docs/pricing">API Pricing - Google Gemini</a></p>
 
 </details> 
