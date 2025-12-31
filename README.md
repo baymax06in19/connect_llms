@@ -88,11 +88,15 @@ Otherwise, we rely on *cloud-based usage*.
 
 We will next explore both approaches.
 
----
-**open-ai**
+<details>
+<summary><h3>Open-ai</h3></summary>
 
-Follow there offcial documents from the following link, 
+<br>
+
+Follow the official OpenAI documentation using the link below:  
 [OpenAI Platform Quickstart (Python)](https://platform.openai.com/docs/quickstart?language=python)
+
+---
 
 #### 🔹 Step 01 — Create an API Key  
 <img src="images/openai-1.png" width="400">
@@ -103,38 +107,39 @@ Follow there offcial documents from the following link,
 #### 🔹 Step 03 — Name the Key  
 <img src="images/openai-3.png" width="300">
 
-#### 🔹 Step 04 — Copy and Save the Key Safely  
+#### 🔹 Step 04 — Copy and Store the Key Securely  
 <img src="images/openai-4_1.png" width="300">
 
+---
 
-So now you have the key let's talk to the gpt.....
-[code:](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py)
+Now that you have generated your API key, you can start interacting with GPT.
+
+Reference implementation:  
+[connect_openai.py](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py)
 
 ```python
 # Step 1: Import the 'os' module to access environment variables
 import os
 
-# Step 2: Get your OpenAI API key from your system environment variables
-# Make sure you have set it like this in your terminal before running the script:
+# Step 2: Retrieve the OpenAI API key from environment variables
+# Ensure it is set before running the script:
 # export OPENAI_API_KEY="your_api_key_here"
 api_key = os.getenv("OPENAI_API_KEY")
 
-# Step 3: Import the OpenAI client library
+# Step 3: Import the OpenAI client
 from openai import OpenAI
 
-# Step 4: Create a client object that will let us talk to the OpenAI API
-# The OpenAI SDK automatically uses your API key from your system environment,
-# so we don't need to pass it manually unless you want to.
-# Example: client = OpenAI(api_key=api_key)
+# Step 4: Initialize the OpenAI client
+# The SDK automatically reads the API key from the environment
 client = OpenAI()
 
 # Step 5: Send a request to the model
 response = client.responses.create(
-    model="gpt-5-nano",  # You can change this to any available model
+    model="gpt-5-nano",
     input="Write a one-sentence bedtime story about a unicorn."
 )
 
-# Step 6: Print the output text from the model's response
+# Step 6: Print the model output
 print(response.output_text)
 ```
 For the first time, you may be able to generate responses using smaller models for free — depending on your account credits or trial eligibility.
@@ -142,6 +147,75 @@ For the first time, you may be able to generate responses using smaller models f
 You can check the official pricing and free-tier details here:
 [API Pricing - OpenAI](https://platform.openai.com/docs/pricing)
 
+</details> 
+
+<details>
+<summary><h3>claude</h3></summary>
+
+<br>
+
+Follow the official Claude API Overview documentation using the link below:  
+[ Claude API Overview documentation](https://platform.claude.com/docs/en/api/overview)
+
+---
+
+#### 🔹 Step 01 — Create an API Key  
+<img src="images/claude-api1-1.png" width="400">
+
+#### 🔹 Step 02 — Create a Secret Key  
+<img src="images/claude-api2.png" width="400">
+
+#### 🔹 Step 03 — Name the Key  
+
+#### 🔹 Step 04 — Copy and Store the Key Securely  
 
 
+---
 
+Now that you have generated your API key, you can start interacting with models.
+
+Reference implementation:  
+[connect_openai.py](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py)
+
+```python
+# Step 1: Import the 'os' module to access environment variables
+import os
+
+# Step 2: Get your Anthropic API key from your system environment variables
+# Make sure you have set it like this in your terminal before running the script:
+# export ANTHROPIC_API_KEY="your_api_key_here"
+api_key = os.getenv("ANTHROPIC_API_KEY")
+#ANTHROPIC_API_KEY = "sk-ant-a***" 
+
+
+# Step 3: Import the Anthropic client library
+from anthropic import Anthropic
+
+# Step 4: Create a client object that will let us talk to the Anthropic API
+# The Anthropic SDK automatically uses your API key from your system environment
+client = Anthropic(api_key=api_key)
+
+# Step 5: Send a request to the model
+response = client.messages.create(
+    model="claude-3-haiku-20240307",  # You can change this to any available Claude model
+    max_tokens=100,
+    messages=[
+        {
+            "role": "user",
+            "content": "Write a one-sentence bedtime story about a unicorn."
+        }
+    ]
+)
+
+# Step 6: Print the output text from the model's response
+if response.content:
+    print(response.content[0].text)
+
+```
+Since the account has no available credits, you might see an error like "Your credit balance is too low."
+This is normal and confirms that the code is working correctly.
+
+You can check the official pricing and free-tier details here:
+[API Pricing - Claude](https://platform.claude.com/docs/en/about-claude/pricing)
+
+</details> 
