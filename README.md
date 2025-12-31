@@ -88,7 +88,6 @@ Otherwise, we rely on *cloud-based usage*.
 
 We will next explore both approaches.
 
-<details>
 <summary><h3>Open-ai</h3></summary>
 
 <br>
@@ -146,9 +145,8 @@ For the first time, you may be able to generate responses using smaller models f
 
 You can check the official pricing and free-tier details here:
 <a href="https://platform.openai.com/docs/pricing">API Pricing - OpenAI</a>
-</details> 
 
-<details>
+
 <summary><h3>Claude</h3></summary>
 
 <br>
@@ -216,9 +214,7 @@ This is normal and confirms that the code is working correctly.
 
 You can check the official pricing and free-tier details here:
 <a href="https://platform.claude.com/docs/en/about-claude/pricing">API Pricing - Claude</a>
-</details> 
 
-<details>
 <summary><h3>Google Gemini</h3></summary>
 
 <br>
@@ -275,4 +271,3 @@ For the first time, you may be able to generate responses using smaller models f
 You can check the official pricing and free-tier details here:  
 <a href="https://ai.google.dev/gemini-api/docs/pricing">API Pricing - Google Gemini</a>
 
-</details> 
