@@ -94,7 +94,7 @@ We will next explore both approaches.
 <br>
 
 Follow the official OpenAI documentation using the link below:  
-[OpenAI Platform Quickstart (Python)](https://platform.openai.com/docs/quickstart?language=python)
+<a href="https://platform.openai.com/docs/quickstart?language=python">OpenAI Platform Quickstart (Python)</a>
 
 ---
 
@@ -115,7 +115,7 @@ Follow the official OpenAI documentation using the link below:
 Now that you have generated your API key, you can start interacting with GPT.
 
 Reference implementation:  
-[connect_openai.py](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py)
+<a href="https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py">connect_openai.py</a>
 
 ```python
 # Step 1: Import the 'os' module to access environment variables
@@ -145,8 +145,7 @@ print(response.output_text)
 For the first time, you may be able to generate responses using smaller models for free — depending on your account credits or trial eligibility.
 
 You can check the official pricing and free-tier details here:
-[API Pricing - OpenAI](https://platform.openai.com/docs/pricing)
-
+<a href="https://platform.openai.com/docs/pricing">API Pricing - OpenAI</a>
 </details> 
 
 <details>
@@ -155,7 +154,7 @@ You can check the official pricing and free-tier details here:
 <br>
 
 Follow the official Claude API Overview documentation using the link below:  
-[ Claude API Overview documentation](https://platform.claude.com/docs/en/api/overview)
+<a href="https://platform.claude.com/docs/en/api/overview">Claude API Overview documentation</a>
 
 ---
 
@@ -175,7 +174,7 @@ Follow the official Claude API Overview documentation using the link below:
 Now that you have generated your API key, you can start interacting with models.
 
 Reference implementation:  
-[connect_claude.py](https://github.com/baymax06in19/connect_llms/blob/main/code/conncet_claude.py)
+<a href="https://github.com/baymax06in19/connect_llms/blob/main/code/conncet_claude.py">connect_claude.py</a>
 
 ```python
 # Step 1: Import the 'os' module to access environment variables
@@ -216,8 +215,7 @@ Since the account has no available credits, you might see an error like "Your cr
 This is normal and confirms that the code is working correctly.
 
 You can check the official pricing and free-tier details here:
-[API Pricing - Claude](https://platform.claude.com/docs/en/about-claude/pricing)
-
+<a href="https://platform.claude.com/docs/en/about-claude/pricing">API Pricing - Claude</a>
 </details> 
 
 <details>
@@ -226,7 +224,8 @@ You can check the official pricing and free-tier details here:
 <br>
 
 Follow the official Google Gemini API documentation using the link below:  
-[Google Gemini API Overview](https://ai.google.dev/gemini-api/docs/api-key)
+[]()
+<a href="https://ai.google.dev/gemini-api/docs/api-key">Google Gemini API Overview</a>
 
 ---
 #### 🔹 Step 01 — Create or view the gemini API key
@@ -241,7 +240,8 @@ Follow the official Google Gemini API documentation using the link below:
 Now that you have generated your API key, you can start interacting with Gemini models.
 
 Reference implementation:  
-[connect_gemini.py](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_gemini.py)
+<a href="https://github.com/baymax06in19/connect_llms/blob/main/code/connect_gemini.py">connect_gemini.py</a>
+
 
 ```python
 # Step 1: Import the 'os' module to access environment variables
@@ -273,6 +273,6 @@ For the first time, you may be able to generate responses using smaller models f
 
 
 You can check the official pricing and free-tier details here:  
-<a href="https://ai.google.dev/gemini-api/docs/pricing">API Pricing - Google Gemini</a></p>
+<a href="https://ai.google.dev/gemini-api/docs/pricing">API Pricing - Google Gemini</a>
 
 </details> 
