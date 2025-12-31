@@ -219,3 +219,60 @@ You can check the official pricing and free-tier details here:
 [API Pricing - Claude](https://platform.claude.com/docs/en/about-claude/pricing)
 
 </details> 
+
+<details>
+<summary><h3>Google Gemini</h3></summary>
+
+<br>
+
+Follow the official Google Gemini API documentation using the link below:  
+[Google Gemini API Overview](https://ai.google.dev/gemini-api/docs/api-key)
+
+---
+#### 🔹 Step 01 — Create or view the gemini API key
+
+#### 🔹 Step 02 — Create API key
+
+#### 🔹 Step 03 — Name your key
+
+#### 🔹 Step 04 — Copy and Store the Key Securely  
+---
+
+Now that you have generated your API key, you can start interacting with Gemini models.
+
+Reference implementation:  
+[connect_gemini.py](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_gemini.py)
+
+```python
+# Step 1: Import the 'os' module to access environment variables
+import os
+
+# Step 2: Get your Google Gemini API key from your system environment variables
+# Make sure you have set it like this in your terminal before running the script:
+# export GEMINI_API_KEY="your_api_key_here"
+api_key = os.getenv("GEMINI_API_KEY")
+
+# Step 3: Import the Google Gemini client library
+from google import genai
+
+# Step 4: Create a client object that will let us talk to the Gemini API
+# The client automatically uses the API key we pass
+client = genai.Client()
+
+# Step 5: Send a request to the model
+response = client.models.generate_content(
+    model="gemini-2.5-flash",        # You can choose another Gemini model if needed
+    contents="Explain how AI works in a few words"
+)
+
+# Step 6: Print the output text from the model's response
+print(response.text)
+```
+
+For the first time, you may be able to generate responses using smaller models for free — depending on your account credits or trial eligibility.
+
+
+You can check the official pricing and free-tier details here:
+[API Pricing - Google Gemini](https://ai.google.dev/gemini-api/docs/pricing)
+
+</details> 
