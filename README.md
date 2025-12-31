@@ -150,7 +150,7 @@ You can check the official pricing and free-tier details here:
 </details> 
 
 <details>
-<summary><h3>claude</h3></summary>
+<summary><h3>Claude</h3></summary>
 
 <br>
 
@@ -160,7 +160,7 @@ Follow the official Claude API Overview documentation using the link below:
 ---
 
 #### 🔹 Step 01 — Create an API Key  
-<img src="images/claude-api1-1.png" width="400">
+<img src="images/claude-api1.png" width="400">
 
 #### 🔹 Step 02 — Create a Secret Key  
 <img src="images/claude-api2.png" width="400">
@@ -175,7 +175,7 @@ Follow the official Claude API Overview documentation using the link below:
 Now that you have generated your API key, you can start interacting with models.
 
 Reference implementation:  
-[connect_openai.py](https://github.com/baymax06in19/connect_llms/blob/main/code/connect_openai.py)
+[connect_claude.py](https://github.com/baymax06in19/connect_llms/blob/main/code/conncet_claude.py)
 
 ```python
 # Step 1: Import the 'os' module to access environment variables
