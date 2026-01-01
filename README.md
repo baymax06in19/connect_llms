@@ -87,16 +87,14 @@ Otherwise, we rely on *cloud-based usage*.
 | **On-cloud** | OpenAI, Anthropic, Ollama Cloud, etc. | Use hosted models through APIs |
 
 We will next explore both approaches.
-
+**On-cloud**
 <summary><h3>Open-ai</h3></summary>
 
 <br>
-
 Follow the official OpenAI documentation using the link below:  
 <a href="https://platform.openai.com/docs/quickstart?language=python">OpenAI Platform Quickstart (Python)</a>
 
 ---
-
 #### 🔹 Step 01 — Create an API Key  
 <img src="images/openai-1.png" width="400">
 
@@ -267,7 +265,107 @@ print(response.text)
 
 For the first time, you may be able to generate responses using smaller models for free — depending on your account credits or trial eligibility.
 
-
 You can check the official pricing and free-tier details here:  
 <a href="https://ai.google.dev/gemini-api/docs/pricing">API Pricing - Google Gemini</a>
+
+<summary><h3>Ollama Cloud</h3></summary>
+
+<br>
+
+Follow the official Ollama Cloud documentation using the link below:  
+
+<a href="https://docs.ollama.com/cloud#python">Ollama-Cloud Docs</a>
+
+---
+#### 🔹 Step 01 — Create or view the gemini API key
+
+#### 🔹 Step 02 — Create API key
+
+#### 🔹 Step 03 — Name your key
+
+#### 🔹 Step 04 — Copy and Store the Key Securely  
+---
+
+Now that you have generated your API key, you can start interacting with Ollama models.
+
+```python
+# Step 1: Import the 'os' module to access environment variables
+import os
+
+# Step 2: Import the Ollama client library
+from ollama import Client
+
+# Step 3: Create a Client object to communicate with the Ollama API
+# The API key is passed via the Authorization header
+client = Client(
+    host="https://ollama.com",
+    headers={
+        "Authorization": "Bearer " + ollama_api_key
+    }
+)
+
+# Step 4: Define the chat messages to send to the model
+messages = [
+    {
+        "role": "user",
+        "content": "Why is the sky blue?"
+    }
+]
+
+# Step 5: Send the chat request to the model with streaming enabled
+# The response will arrive in small parts (tokens/chunks)
+for part in client.chat(
+    model="gpt-oss:120b",
+    messages=messages,
+    stream=True
+):
+    # Step 6: Print each streamed chunk as it arrives
+    print(part["message"]["content"], end="", flush=True)
+```
+Upto a limit, you will be able to generate responses using  models for free.
+
+You can check the official pricing and free-tier details here:  
+
+
+**On-host**
+
+## Ollama — On-Host LLM Setup
+
+Ollama allows you to run and experiment with LLMs locally on your machine. Below is a structured guide to getting started.
+
+---
+
+### Step 01: Install Ollama
+
+Download and install Ollama for macOS from the official link:
+<a href="https://ollama.com/download/mac">Ollama Installation</a>
+
+---
+
+### Step 02: Verify Installation
+
+After installation, open a terminal and run:
+```bash
+ollama
+```
+
+### Step 03: Directly Call a Model
+
+You can run a model locally using:
+
+```bash
+ollama run deepseek-r1:1.5b
+ollama run <model_id>
+```
+
+to find any model id please visit,
+<a href="https://ollama.com/search">Ollama Models</a>
+
+> As mentioned previously, running Ollama locally requires sufficient system resources. If you don’t have enough RAM, you won’t be able to run larger models.
+---
+### Step 04: Host LLMs on a Server
+
+You can host LLMs on a server and use them in your code.
+
+
 
