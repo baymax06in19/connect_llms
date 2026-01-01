@@ -11,7 +11,7 @@ The reason behind the recent major breakthrough of the term *AI* is AI is the ri
 LLM is powerful, right?  
 So should we **build it** or **use it**?
 
-For me, it’s both. First, we will *use them*, explore their capabilities, and gain hands-on experience with the “monster” we’re dealing with. Later, we will dive into the *core theories behind LLMs* and try building one from scratch.
+It may be both but first, we will *use them*, explore their capabilities, and gain hands-on experience with the “monster” we’re dealing with. Later, we will dive into the *core theories behind LLMs* and try building one from scratch.
 
 ---
 
