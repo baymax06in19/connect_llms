@@ -271,20 +271,9 @@ You can check the official pricing and free-tier details here:
 <summary><h3>Ollama Cloud</h3></summary>
 
 <br>
-
 Follow the official Ollama Cloud documentation using the link below:  
 
 <a href="https://docs.ollama.com/cloud#python">Ollama-Cloud Docs</a>
-
----
-#### 🔹 Step 01 — Create or view the gemini API key
-
-#### 🔹 Step 02 — Create API key
-
-#### 🔹 Step 03 — Name your key
-
-#### 🔹 Step 04 — Copy and Store the Key Securely  
----
 
 Now that you have generated your API key, you can start interacting with Ollama models.
 
@@ -362,6 +351,7 @@ to find any model id please visit,
 <a href="https://ollama.com/search">Ollama Models</a>
 
 > As mentioned previously, running Ollama locally requires sufficient system resources. If you don’t have enough RAM, you won’t be able to run larger models.
+
 ---
 ### Step 04: Host LLMs on a Server
 
